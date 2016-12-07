@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema
+        xmlns="http://www.kanmars.cn/kb"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        targetNamespace="http://www.kanmars.cn/kb"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+    <xsd:element name="server">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="bindip" type="xsd:string" default="0.0.0.0"/>
+                    <xsd:attribute name="bindport" type="xsd:int" default="9999"/>
+                    <xsd:attribute name="minthreadpool" type="xsd:int" default="5"/>
+                    <xsd:attribute name="maxthreadpool" type="xsd:int" default="100"/>
+                    <xsd:attribute name="idleTimeout" type="xsd:int" default="60000"/>
+                    <xsd:attribute name="register" type="xsd:string" use="required"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="properties">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="value" type="xsd:string" use="required"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="client">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="basepackage" type="xsd:string" use="required"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="register">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="address" type="xsd:string" use="required"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="show">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="ip" type="xsd:string" use="required"/>
+                    <xsd:attribute name="port" type="xsd:int" use="required"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

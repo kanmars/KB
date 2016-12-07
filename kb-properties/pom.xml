@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kb</artifactId>
+        <groupId>cn.kanmars</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>kb-properties</artifactId>
+    <packaging>jar</packaging>
+
+    <name>kb-properties</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>3.2.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.kanmars</groupId>
+            <artifactId>kb-util</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+</project>
